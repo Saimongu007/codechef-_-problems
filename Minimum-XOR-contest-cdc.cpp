@@ -18,22 +18,22 @@ int main()
         }
 
         // Calculate XOR without removing any element
-        int xorWithoutRemoval = 0;
+        int x = 0;
         for (int i = 0; i < N; ++i)
         {
-            xorWithoutRemoval ^= A[i];
+            x ^= A[i];
         }
 
-        int minXOR = xorWithoutRemoval;
+        int min_XOR = x;
 
         // Iterate through each element, remove it, and calculate XOR
         for (int i = 0; i < N; ++i)
         {
-            int tempXOR = xorWithoutRemoval ^ A[i];
-            minXOR = min(minXOR, tempXOR);
+            int t_x = x ^ A[i];
+            min_XOR = min(min_XOR, t_x);
         }
 
-        cout << minXOR << endl;
+        cout << min_XOR << endl;
     }
 
     return 0;
